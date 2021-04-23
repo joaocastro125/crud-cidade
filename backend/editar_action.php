@@ -1,6 +1,7 @@
 <?php
 require 'db.php';
 
+
 $cidade = filter_input(INPUT_POST, 'cidade');
 $regiao = filter_input(INPUT_POST, 'regiao');
 if ($cidade && $regiao) {
@@ -13,8 +14,8 @@ if ($cidade && $regiao) {
 
     $sql->execute();
     var_dump($cidade, $regiao);
-    header("Location:/");
+    header("location:index.php");
 } else {
 
-    header("Location:editar.php");
+    header("location:index.php");
 }
